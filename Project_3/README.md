@@ -1,15 +1,50 @@
-Project Overview
+Project Introduction
+In Project 2: Private Blockchain, you solved the challenge of how to persist our blockchain dataset.
+Your next challenge is to build a RESTful API using a Node.js framework that will interfaces with the
+private blockchain By configuring an API for your private blockchain you expose functionality that can
+be consumed by several types of web clients ranging from desktop, mobile, and IoT devices. For your next
+project, you will be creating a RESTful web API for your private blockchain. The API project will require
+two endpoints:
+	GET block
+	POST block
+    
+Why this project?
+This project introduces you to the fundamentals of web APIs with Node.js frameworks. Using your own
+private blockchain to create a web API is a huge first step toward developing your own web applications
+that are consumable by a variety of web clients. Later in this program, you’ll be programming blockchain
+technologies that utilize these similar features using smart contracts.
 
-Keeping the blockchain data in an array is costly and data stored in the blockchain is at the risk of permament loss. To avoid these pitfalls we will
-store the blockchain data in levelDB which is robust DB for storing as key/value pair dataset.
+What will I learn?
+You will learn to create and manage a web API with a Node.js framework to interact with your private
+blockchain. You’ll get first hand experience generating API endpoints and configuring the endpoints
+response that can be consumable by many types of web clients. This project helps build on the skills
+you’ve learned so far an allow you to apply these skills using real world technologies to get hands
+on with the tools used to create web APIs.
 
-In the boilerplate project data is stored in array. The array needs to be replaced with levelDB to persist blockchain data. Function that worked with
-arry's should work with levelDB.
+Framework used
+	Express.js
+    
+Getting started
+	Open a terminal and install node.js framework.
+    Install crypto.js, level.js, express.js and body-parser.js framworks.
+    
+    npm install crypto-js --save
+    npm install level --save
+    npm install express --save
+    npm install body-parser --save
+    
+Testing
+	Run the server using
 
-For testing the project:
+	node index.js
+    
+Use software like postman or simple CURL on the terminal to send the requests to the server using
+url http://localhost:8000 with one of the below supported endpoints:
 
-1. node simpleChain.js
-        This command will invoke the function contained in the simpleChain.js command.
-        first it will check if the database is empty, if so then it will add the genesis block in the chain and then add 10 more blocks of test data.
-
-        Then it will call the validateChain function to check the validatity of the BlockChain.
+GET /block/{BLOCK_HEIGHT}
+example using curl:
+	curl http://localhost:8000/block/0
+    
+POST /block
+example using curl:
+	curl -X POST http://localhost:8000/block -H 'Content-Type: application/json' -d $'{"body":"Test Block 1"}'
