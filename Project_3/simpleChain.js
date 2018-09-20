@@ -152,6 +152,8 @@ class Blockchain {
 	}
 }
 
+module.exports = Blockchain
+
 /* ================================= Testing ==================================|
 |  - Self-invoking function to add blocks to chain                             |
 |  - Learn more:                                                               |
@@ -163,6 +165,7 @@ class Blockchain {
 |     ( new block every 10 minutes )                                           |
 |  ===========================================================================*/
 
+/*
 let blockchain = new Blockchain();
 
 (function theLoop (i) {
@@ -178,3 +181,4 @@ let blockchain = new Blockchain();
 
 setTimeout(() => console.log("\n\nValidating BlockChain...\n"), 15000);
 setTimeout(() => blockchain.validateChain(), 20000);
+*/
