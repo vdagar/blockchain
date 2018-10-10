@@ -56,3 +56,5 @@ node_modules
 package*.*
 .vscode/
 database
+.solium*
+build*
